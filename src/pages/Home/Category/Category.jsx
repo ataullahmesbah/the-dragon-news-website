@@ -1,13 +1,14 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-const Home = () => {
-    
+const Category = () => {
+
+    const {id} = useParams();
     return (
         <div>
-            <h3>This is home Page.</h3>
+            <h2>This is Category: {id}</h2>
         </div>
     );
 };
 
-export default Home;
+export default Category;
