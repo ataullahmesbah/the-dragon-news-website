@@ -7,6 +7,8 @@ import RightNav from '../Shared/RightNav/RightNav';
 import { Outlet } from 'react-router-dom';
 
 
+
+
 const Main = () => {
     return (
         <div>

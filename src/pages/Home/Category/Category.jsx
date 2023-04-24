@@ -1,12 +1,20 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useLoaderData, useParams } from 'react-router-dom';
+import NewsCard from '../NewsCard/NewsCard';
 
 const Category = () => {
 
     const {id} = useParams();
+    const categoryNews = useLoaderData();
     return (
-        <div>
-            <h2>This is Category: {id}</h2>
+        <div className='pt-5'>
+            <h2 className='mb-3'>This is Category: {categoryNews.length}</h2>
+            {
+                categoryNews.map(news => <NewsCard
+                key={news._id}
+                news={news}
+                ></NewsCard>)
+            }
         </div>
     );
 };
