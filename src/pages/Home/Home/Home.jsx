@@ -1,11 +1,12 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import Category from '../Category/Category';
+import { Outlet } from 'react-router-dom';
 
 const Home = () => {
-    
     return (
         <div>
-            <h3>This is home Page.</h3>
+           
+            
         </div>
     );
 };

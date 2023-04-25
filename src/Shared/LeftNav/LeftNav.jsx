@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import LeftCategory from '../Leftcategory/LeftCategory';
+import EditorsInsights from '../../pages/News/EditorsInsights/EditorsInsights';
+import LeftEditorsIn from '../LeftEditorsIn/LeftEditorsIn';
 
 const LeftNav = () => {
 
@@ -20,6 +22,8 @@ const LeftNav = () => {
                 category={category}
                 ></LeftCategory>)
             }
+
+           <LeftEditorsIn></LeftEditorsIn>
         </div>
     );
 };

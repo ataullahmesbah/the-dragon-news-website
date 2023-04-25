@@ -1,10 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
-import Home from "../pages/Home/Home/Home";
+
 
 import NewsLayout from "../layout/NewsLayout";
 import News from "../pages/News/News/News";
 import Category from "../pages/Home/Category/Category";
+import Home from "../pages/Home/Home/Home";
 
 
 const router = createBrowserRouter([
@@ -14,7 +15,8 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Category></Category>,
+                loader: () => fetch('http://localhost:5000/news')
             },
             {
                 path: '/category/:id',
@@ -29,7 +31,8 @@ const router = createBrowserRouter([
         children: [
             {
                 path: ':id',
-                element: <News></News>
+                element: <News></News>,
+                loader: ({params}) => fetch(`http://localhost:5000/news/${params.id}`)
             }
         ]
     }
