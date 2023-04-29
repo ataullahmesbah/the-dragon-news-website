@@ -10,7 +10,7 @@ const Login = () => {
         const navigate = useNavigate();
         const location = useLocation();
         console.log('login location', location);
-        const from = location.state.form.pathname || '/category/0'
+        const from = location.state?.form?.pathname || '/category/0'
 
 
         const handleSignIn = event => {
